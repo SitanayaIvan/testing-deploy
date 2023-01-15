@@ -17,5 +17,5 @@ func main() {
 			"message": "Hello World!",
 		})
 	})
-	r.Run(":" + conf.Port)
+	r.Run(":" + conf.Port) // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
