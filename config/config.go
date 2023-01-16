@@ -15,7 +15,15 @@ func LoadVariable() (ConfigBody, error) {
 		log.Println("[Error] loading .env file")
 	}
 
-	conf.Port = os.Getenv("PORT")
+	// DB
+	conf.Db.Host = os.Getenv("DB_HOST")
+	conf.Db.Name = os.Getenv("DB_NAME")
+	conf.Db.User = os.Getenv("DB_USER")
+	conf.Db.Password = os.Getenv("DB_PASSWORD")
+	conf.Db.Port = os.Getenv("DB_PORT")
+
+	// APP
+	conf.App.Port = os.Getenv("PORT")
 
 	return conf, nil
 }
