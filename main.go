@@ -20,8 +20,8 @@ func main() {
 	}
 	log.Println("[SUCCESS] Connect database success!")
 
-	// Migrate D
-	database.MigrateDb(db)
+	// Migrate Db
+	// database.MigrateDb(db)
 
 	// Routing
 	r := gin.Default()
