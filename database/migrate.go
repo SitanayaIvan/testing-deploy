@@ -1,7 +1,7 @@
 package database
 
 import (
-	"os/user"
+	"github.com/SitanayaIvan/testing-deploy/user"
 
 	"gorm.io/gorm"
 )
