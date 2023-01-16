@@ -33,16 +33,16 @@ func (r repository) GetUserById(id int) (User, error) {
 }
 
 func (r repository) CreateUser(user User) error {
-	err := r.db.Create(user).Error
+	err := r.db.Create(&user).Error
 	return err
 }
 
 func (r repository) UpdateUser(user User) error {
-	err := r.db.Save(user).Error
+	err := r.db.Save(&user).Error
 	return err
 }
 
 func (r repository) DeleteUser(id int) error {
-	err := r.db.Delete(User{}, id).Error
+	err := r.db.Delete(&User{}, id).Error
 	return err
 }
