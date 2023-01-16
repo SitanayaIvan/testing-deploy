@@ -7,7 +7,6 @@ RUN go build -o /go/bin/backend .
 
 FROM alpine:3.16
 COPY --chown=65534:65534 --from=builder /go/bin/backend .
-ENV PORT=8080
 
 EXPOSE 8080
 CMD [ "./backend" ]
