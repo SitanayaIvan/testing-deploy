@@ -6,7 +6,12 @@ type ConfigBody struct {
 }
 
 type DBAccount struct {
-	DBUrl string
+	Host     string
+	Name     string
+	User     string
+	Password string
+	Port     string
+	DBUrl    string
 }
 
 type AppAccount struct {
