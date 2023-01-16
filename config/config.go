@@ -21,6 +21,7 @@ func LoadVariable() (ConfigBody, error) {
 	conf.Db.User = os.Getenv("DB_USER")
 	conf.Db.Password = os.Getenv("DB_PASSWORD")
 	conf.Db.Port = os.Getenv("DB_PORT")
+	conf.Db.DBUrl = os.Getenv("DB_URL")
 
 	// APP
 	conf.App.Port = os.Getenv("PORT")

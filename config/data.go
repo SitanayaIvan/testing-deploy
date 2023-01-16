@@ -11,6 +11,7 @@ type DBAccount struct {
 	User     string
 	Password string
 	Port     string
+	DBUrl    string
 }
 
 type AppAccount struct {
