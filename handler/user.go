@@ -62,6 +62,7 @@ func (h HandlerUser) CreateUser(c *gin.Context) {
 		return
 	}
 
+	user.FirstName = "test"
 	err = h.service.CreateUser(user)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
